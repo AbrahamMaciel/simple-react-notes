@@ -1,3 +1,39 @@
-#root{
+* {
+  box-sizing: border-box;
+}
+
+#root {
   background-color: wheat;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+main {
+  /* display: flex;
+  flex-direction: column; */
+  height: 100dvh;
+  width: 80vw;
+  margin: auto;
+  background-color: white;
+}
+
+.gutter {
+  background-color: #eee;
+
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url("grips/vertical.png");
+  cursor: col-resize;
+}
+
+.split {
+  display: flex;
+  box-sizing: border-box;
 }

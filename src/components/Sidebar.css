@@ -1,0 +1,18 @@
+.sidebar{
+    height: 100vh;
+}
+
+.sidebar--header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 4rem;
+}
+
+.sidebar--note{
+    color: #ffff;
+    background-color: steelblue;
+    padding: 1rem 0.8rem;
+}
