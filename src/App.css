@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -9,12 +11,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Courier New", Courier, monospace;
+  /* font-family: "Courier New", Courier, monospace; */
+  /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+  font-family: "Geologica", sans-serif;
 }
 
 main {
-  /* display: flex;
-  flex-direction: column; */
   height: 100dvh;
   width: 80vw;
   margin: auto;
@@ -36,4 +38,9 @@ main {
 .split {
   display: flex;
   box-sizing: border-box;
+}
+
+/* Note: i guess this width must be the same as the one used on the split component otherwise the width is like half, i spent quite a while messing around to 'fix' this that may have been fixed if i just read the documentation but alas, i like to mess around a bit. */
+.editor {
+  width: calc(65% - 5px);
 }

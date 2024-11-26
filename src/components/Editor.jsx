@@ -1,5 +1,4 @@
 import React from "react";
-import "./Editor.css";
 import MDEditor, { commands } from "@uiw/react-md-editor";
 
 function Editor({ currentNote, updateNote }) {
@@ -7,11 +6,12 @@ function Editor({ currentNote, updateNote }) {
     <section className="editor" data-color-mode="light">
       <MDEditor
         value={currentNote.body}
+        className="MDEditor"
         onChange={(text) => updateNote(text)}
         height="100%"
         visibleDragbar={false}
         textareaProps={{
-          placeholder: "Please do some shit",
+          placeholder: "Write something on your mind, literally",
         }}
         commands={[
           commands.comment,

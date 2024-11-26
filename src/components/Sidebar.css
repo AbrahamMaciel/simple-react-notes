@@ -5,10 +5,10 @@
 .sidebar--header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: white;
-  padding: 1rem 4rem;
+  padding: 1rem 0;
+  font-size: 1.2rem;
 }
 
 .sidebar--button {
@@ -20,15 +20,29 @@
   color: #ffff;
   font-size: 20px;
   text-align: center;
+  cursor: pointer;
+  transition: background-color 500ms;
 }
 
-.sidebar--note {
+.sidebar--button:hover {
+  background-color: rgb(49, 100, 143);
+}
+
+.sidebar--note > h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   padding: 1rem 0.8rem;
   cursor: pointer;
-  color: #3e424b;
+  color: #292d33;
+  margin: 0;
+  padding: 1.2rem 1rem;
+  font-weight: 400;
 }
 
-.sidebar--note.active {
+.sidebar--note.active > h4 {
   background-color: steelblue;
   color: #ffff;
+  font-weight: bolder;
 }
