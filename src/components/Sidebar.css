@@ -2,7 +2,6 @@
   height: 100vh;
   min-width: 200px;
   width: 30%;
-  /* width: calc(35% - 5px); */
 }
 
 .sidebar--header {

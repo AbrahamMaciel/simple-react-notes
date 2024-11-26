@@ -7,23 +7,30 @@ import Editor from "./components/Editor";
 import { nanoid } from "nanoid";
 import EditorLanding from "./components/EditorLanding";
 
+// Well the thing is that i was supposed to use firebase to sync the notes with a database or somethin' but the react course that i was following suddenly changed all the clases since it was using an old react version now ill go see all the videos again i guess and come back to implement the good stuff later.
 function App() {
-  const [notes, setNotes] = React.useState([
-    {
-      id: nanoid(),
-      body: "# Type your markdown note's title here",
-    },
-    {
-      id: nanoid(),
-      body: "Dis should be second note \n yeah newlinee babeee \n\n\n yes",
-    },
-    {
-      id: nanoid(),
-      body: "How 'bout three of em?",
-    },
-  ]);
+  // const [notes, setNotes] = React.useState([
+  //   {
+  //     id: nanoid(),
+  //     body: "# Type your markdown note's title here",
+  //   },
+  //   {
+  //     id: nanoid(),
+  //     body: "Dis should be second note \n\n\n yeah newlineess babeeee!",
+  //   },
+  //   {
+  //     id: nanoid(),
+  //     body: "How 'bout three of em?",
+  //   },
+  // ]);
 
-  // const [notes, setNotes] = React.useState([])
+  const [notes, setNotes] = React.useState(
+    () => JSON.parse(localStorage.getItem("notes")) || []
+  );
+
+  React.useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   const [currentNoteId, setCurrentNoteId] = React.useState(notes[0]?.id || "");
   const currentNote =
@@ -70,7 +77,11 @@ function App() {
             return (
               <div
                 {...props}
-                style={{ width: "6px", backgroundColor: "steelblue", boxShadow: 'none'}}
+                style={{
+                  width: "6px",
+                  backgroundColor: "steelblue",
+                  boxShadow: "none",
+                }}
               >
                 <div onMouseDown={onMouseDown} style={{ boxShadow: "none" }} />
               </div>
@@ -88,10 +99,9 @@ function App() {
           {notes.length > 0 ? (
             <Editor currentNote={currentNote} updateNote={updateNote} />
           ) : (
-            <EditorLanding createNote={createNote}/>
+            <EditorLanding createNote={createNote} />
           )}
         </Split>
-
       </main>
     </>
   );
