@@ -1,0 +1,41 @@
+.editor--landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 70%; */
+  flex-grow: 1;
+  min-width: 300px;
+}
+
+.editor--landing--wrapper{
+    width: 80%;
+    /* background-color: red; */
+    text-align: center;
+}
+
+.editor--landing--wrapper > h2 {
+  margin: 0;
+  margin-bottom: 0.8rem;
+}
+
+.editor--landing--wrapper > p {
+  color: #292d33;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.editor--landing--button {
+  color: white;
+  padding: 1rem 2rem;
+  background-color: steelblue;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.editor--landing--button:hover {
+    background-color: rgb(49, 100, 143);
+  }

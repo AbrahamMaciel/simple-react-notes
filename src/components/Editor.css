@@ -1,0 +1,5 @@
+.editor{
+    min-width: 300px;
+    /* width: 70%; */
+    flex-grow: 1;
+}

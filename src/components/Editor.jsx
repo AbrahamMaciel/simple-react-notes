@@ -1,5 +1,6 @@
 import React from "react";
 import MDEditor, { commands } from "@uiw/react-md-editor";
+import './Editor.css'
 
 function Editor({ currentNote, updateNote }) {
   return (
